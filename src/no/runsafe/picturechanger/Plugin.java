@@ -22,11 +22,13 @@ public class Plugin extends RunsafePlugin implements IPlayerInteractEntityEvent,
 	public void OnPlayerInteractEntityEvent(RunsafePlayerInteractEntityEvent event)
 	{
 		RunsafeEntity entity = event.getRightClicked();
-		output.writeColoured(String.format("%d", entity.getEntityId()));
-		if (entity instanceof RunsafePainting && editablePictures.containsKey(entity.getEntityId()) && event.getPlayer().getName().equals(editablePictures.get(entity.getEntityId())))
+		int id = entity.getEntityId();
+		if (entity instanceof RunsafePainting && editablePictures.containsKey(id)
+			&& event.getPlayer().getName().equals(editablePictures.get(entity.getEntityId())))
 		{
 			((RunsafePainting) entity).NextArt();
-			output.writeColoured(String.format("%d", entity.getEntityId()));
+			editablePictures.put(entity.getEntityId(), editablePictures.get(id));
+			editablePictures.remove(id);
 		}
 	}
 
