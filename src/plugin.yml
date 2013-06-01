@@ -1,10 +1,5 @@
 name: PictureChanger
 main: no.runsafe.picturechanger.Plugin
 version: 1.0.@BUILD@
-authors: []
-depend: []
-description:
-commands:
-  something:
-    description:
-    aliases: []
+author: mortenn
+description: Simple plugins to let you change pictures by right clicking them
