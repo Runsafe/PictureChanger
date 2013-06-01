@@ -24,7 +24,10 @@ public class Plugin extends RunsafePlugin implements IPlayerInteractEntityEvent,
 		RunsafeEntity entity = event.getRightClicked();
 		output.writeColoured(String.format("%d", entity.getEntityId()));
 		if (entity instanceof RunsafePainting && editablePictures.containsKey(entity.getEntityId()) && event.getPlayer().getName().equals(editablePictures.get(entity.getEntityId())))
+		{
 			((RunsafePainting) entity).NextArt();
+			output.writeColoured(String.format("%d", entity.getEntityId()));
+		}
 	}
 
 	@Override
