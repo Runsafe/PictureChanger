@@ -1,12 +1,12 @@
 package no.runsafe.picturechanger;
 
 import no.runsafe.framework.RunsafePlugin;
-import no.runsafe.framework.event.hanging.IPaintingPlaced;
-import no.runsafe.framework.event.player.IPlayerInteractEntityEvent;
-import no.runsafe.framework.server.entity.RunsafeEntity;
-import no.runsafe.framework.server.entity.RunsafePainting;
-import no.runsafe.framework.server.event.player.RunsafePlayerInteractEntityEvent;
-import no.runsafe.framework.server.player.RunsafePlayer;
+import no.runsafe.framework.api.event.hanging.IPaintingPlaced;
+import no.runsafe.framework.api.event.player.IPlayerInteractEntityEvent;
+import no.runsafe.framework.minecraft.entity.RunsafeEntity;
+import no.runsafe.framework.minecraft.entity.RunsafePainting;
+import no.runsafe.framework.minecraft.event.player.RunsafePlayerInteractEntityEvent;
+import no.runsafe.framework.minecraft.player.RunsafePlayer;
 
 import java.util.HashMap;
 import java.util.Map;
