@@ -3,10 +3,10 @@ package no.runsafe.picturechanger;
 import no.runsafe.framework.RunsafePlugin;
 import no.runsafe.framework.api.event.hanging.IPaintingPlaced;
 import no.runsafe.framework.api.event.player.IPlayerInteractEntityEvent;
+import no.runsafe.framework.api.player.IPlayer;
 import no.runsafe.framework.minecraft.entity.RunsafeEntity;
 import no.runsafe.framework.minecraft.entity.RunsafePainting;
 import no.runsafe.framework.minecraft.event.player.RunsafePlayerInteractEntityEvent;
-import no.runsafe.framework.minecraft.player.RunsafePlayer;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -33,7 +33,7 @@ public class Plugin extends RunsafePlugin implements IPlayerInteractEntityEvent,
 	}
 
 	@Override
-	public boolean OnPaintingPlaced(RunsafePlayer player, RunsafePainting painting)
+	public boolean OnPaintingPlaced(IPlayer player, RunsafePainting painting)
 	{
 		editablePictures.put(painting.getEntityId(), player.getName());
 		return true;
