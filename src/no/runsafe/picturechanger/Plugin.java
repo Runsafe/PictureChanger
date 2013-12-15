@@ -4,6 +4,7 @@ import no.runsafe.framework.RunsafePlugin;
 import no.runsafe.framework.api.event.hanging.IPaintingPlaced;
 import no.runsafe.framework.api.event.player.IPlayerInteractEntityEvent;
 import no.runsafe.framework.api.player.IPlayer;
+import no.runsafe.framework.features.Events;
 import no.runsafe.framework.minecraft.entity.RunsafeEntity;
 import no.runsafe.framework.minecraft.entity.RunsafePainting;
 import no.runsafe.framework.minecraft.event.player.RunsafePlayerInteractEntityEvent;
@@ -16,6 +17,7 @@ public class Plugin extends RunsafePlugin implements IPlayerInteractEntityEvent,
 	@Override
 	protected void PluginSetup()
 	{
+		addComponent(Events.class);
 	}
 
 	@Override
