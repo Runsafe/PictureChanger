@@ -15,7 +15,7 @@ import java.util.Map;
 public class Plugin extends RunsafePlugin implements IPlayerInteractEntityEvent, IPaintingPlaced
 {
 	@Override
-	protected void PluginSetup()
+	protected void pluginSetup()
 	{
 		addComponent(Events.class);
 	}
