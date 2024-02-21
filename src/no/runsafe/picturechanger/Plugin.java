@@ -61,5 +61,5 @@ public class Plugin extends RunsafePlugin implements IPlayerInteractEntityEvent,
 		return true;
 	}
 
-	private final Map<Integer, String> editablePictures = new HashMap<Integer, String>();
+	private final Map<Integer, String> editablePictures = new HashMap<>();
 }
